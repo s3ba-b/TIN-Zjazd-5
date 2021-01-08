@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> 
+			Zadanie 1
+		</title> 
+		
+		<!-- script to create new button -->
+		<script> 
+			function Button1() { 
+				var myDiv = document.getElementById("GFG");
+				 
+				var div = document.createElement('DIV'); 
+				
+				var text = document.createTextNode("Fifth div"); 
+				
+				div.appendChild(text); 
+				
+				myDiv.appendChild(div);
+            }
+            
+            function Button2() { 
+                var myDiv = document.getElementById("GFG");
+                
+				myDiv.removeChild(myDiv.firstChild); 
+            }
+            
+            function Button3() {
+				document.getElementById("third").style.backgroundColor = "red";
+			}
+			
+			function Button4() {
+				var myDiv = document.getElementById("GFG");
+
+				myDiv.childNodes.forEach(function(item) {
+					item.innerText = "new text";
+				});
+			}
+		</script> 
+	</head> 
+	
+	<body style = "text-align: center;">
+		
+		<button onclick = "Button1()"> 
+			First action 
+        </button> 
+
+        <br>
+        
+        <button onclick = "Button2()"> 
+			Second action 
+        </button> 
+
+        <br>
+        
+        <button onclick = "Button3()"> 
+			Third action 
+		</button> 
+
+		<br>
+        
+        <button onclick = "Button4()"> 
+			Fourth action 
+		</button> 
+		
+		<br><br> 
+		
+        <div id = "GFG">
+            <div id="first">First div</div>
+            <div id="second">Second div</div>
+            <div id="third">Third div</div>
+            <div id="fourth">Fourth div</div>
+        </div>
+	</body> 
+</html>					 
+
